@@ -36,7 +36,12 @@ class CourseController extends Controller
      */
     public function store(StoreCourseRequest $request)
     {
-        //
+        Course::create([
+            'name'     =>    $request->name,
+            'price'    =>    $request->price,
+            'image'    =>    $request->image
+        ]);
+        return true;
     }
 
     /**
